@@ -10,67 +10,79 @@
 
 .header {
 	background-color: #8b4394;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0 auto;
 	width: 100%;
 
-	h1 {
-		margin: 0;
-		padding: 10px 0;
-		line-height: 1;
-	}
-
-	.title {
-		text-align: center;
-		text-decoration: none;
-		margin: 0;
-	}
-
-	span {
-		text-transform: uppercase;
-		display: block;
-	}
-
-	.stoic {
-		font-size: 2.2rem;
-		background: linear-gradient(rgb(250, 218, 115), rgb(248, 229, 165));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		font-family: stoic, serif;
-		font-weight: 400;
-	}
-
-	.hangout {
-		color: #fff;
-		font-size: 1rem;
-		text-transform: lowercase;
-		font-weight: 100;
-		letter-spacing: .2rem;
-		margin-top: -.5rem;
-		font-family: hangout;
-	}
-
-	.nav-list {
+	.header-container {
 		display: flex;
-		list-style-type: none;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+		width: 75%;
 
-	}
-
-	.nav-item {
-		color: #fff;
-		font-size: .9rem;
-		margin-right: 1.3rem;
-		text-decoration: none;
-
-		&:hover {
-			color: rgb(250, 218, 115);
+		@media only screen and (max-width: 500px) {
+			width: 95%;
 		}
-	}
 
-	.nav-item-active {
-		color: rgb(243, 225, 168);
+		h1 {
+			margin: 0;
+			padding: 10px 0;
+			line-height: 1;
+		}
+	
+		.title {
+			text-align: center;
+			text-decoration: none;
+			margin: 0;
+		}
+	
+		span {
+			text-transform: uppercase;
+			display: block;
+		}
+	
+		.stoic {
+			font-size: 2.2rem;
+			background: linear-gradient(rgb(250, 218, 115), rgb(248, 229, 165));
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-family: stoic, serif;
+			font-weight: 400;
+		}
+	
+		.hangout {
+			color: #fff;
+			font-size: 1rem;
+			text-transform: lowercase;
+			font-weight: 100;
+			letter-spacing: .2rem;
+			margin-top: -.5rem;
+			font-family: hangout;
+		}
+
+		.nav-list {
+			display: flex;
+			list-style-type: none;
+		}
+	
+		.nav-item {
+			color: #fff;
+			font-size: .9rem;
+			margin-right: 1.3rem;
+			text-decoration: none;
+	
+			&:hover {
+				color: rgb(250, 218, 115);
+			}
+		}
+	
+		.nav-item-active {
+			color: rgb(243, 225, 168);
+		}
+
+		.nav-item-contact {
+			margin-right: 0;
+		}
 	}
 
 }

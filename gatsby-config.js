@@ -31,7 +31,8 @@ module.exports = {
 							maxWidth: 750,
 							linkImagesToOriginal: false
 						}
-					}
+					},
+					'gatsby-remark-lazy-load'
 				]
 			}
 		}
