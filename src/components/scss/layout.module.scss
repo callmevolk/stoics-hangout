@@ -19,5 +19,28 @@
 	-webkit-box-shadow: 0px 20px 32px -26px rgb(202, 193, 202);
 	-moz-box-shadow: 0px 20px 32px -26px rgb(172, 165, 172);
 	box-shadow: 0px 20px 32px -26px rgb(165, 162, 165);
-	background: rgba(255, 245, 255, 1);	
+	background: rgb(255, 255, 255);	
+	padding: 20px;
+
+	.blog-content {
+		padding: 2px 0;
+		line-height: 1.5;
+		text-align: left;
+		width: 740px;
+		margin: 0 auto;
+
+		@media only screen and (max-width: 780px) {
+			width: 95%;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			max-height: 600px;
+
+			@media only screen and (max-width: 780px) {
+				max-height: 300px;
+			}
+		}
+	}
 }
