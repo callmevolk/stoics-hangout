@@ -4,9 +4,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
+import JustComments from 'gatsby-plugin-just-comments'
 
 import layoutStyles from '../components/scss/layout.module.scss'
 
+//graphql fetch
 export const query = graphql`
 	query($slug: String!) {
 		contentfulBlogPost(slug: {eq: $slug}) {
@@ -19,6 +21,7 @@ export const query = graphql`
 	}
 `
 
+//blog page configuration
 const Blog = props => {
 	const options = {
 		renderNode: {
@@ -36,6 +39,11 @@ const Blog = props => {
 				<h1>{props.data.contentfulBlogPost.title}</h1>
 				<p className={layoutStyles.blogDate}><em>{props.data.contentfulBlogPost.publishedDate}</em></p>
 				{documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
+				<JustComments
+					apikey={process.env.REACT_APP_JUST_COMMENTS_ID}
+					recaptcha="true"
+					allowguests="true"
+  			/>
 			</div>
 		</Layout>
 	)
